@@ -108,6 +108,13 @@ E:\>kubectl get services
 NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   8m35s
 ```
+```
+E:\>kubectl run test-nginx --image=nginx --replicas=2 --port=80 --expose --service-overrides='{ "spec": { "type": "LoadBalancer" } }'
+Flag --replicas has been deprecated, has no effect and will be removed in the future.
+Flag --service-overrides has been deprecated, and will be removed in the future.
+pod/test-nginx created
+error: Invalid JSON Patch
+```
 #
 ```
 E:\>kubectl cluster-info
