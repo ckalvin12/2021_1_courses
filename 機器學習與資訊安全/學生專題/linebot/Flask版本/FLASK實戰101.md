@@ -1,3 +1,28 @@
+# anaconda 環境下python執行
+```
+最好建虛擬環境
+https://blog.techbridge.cc/2017/06/03/python-web-flask101-tutorial-introduction-and-environment-setup/
+
+# 顯示目前虛擬環境列表
+$ conda info -e 
+
+# 創建虛擬環境
+$ conda create -n 套件名稱 python=3.6
+
+# 進入虛擬環境（若是 Windows cmder 環境不用加 source） ，成功後提示字元變成：（套件名稱）$
+$ source activate 套件名稱
+
+# 離開虛擬環境（若是 Windows cmder 環境不用加 source） 
+$ source deactivate
+```
+
+```
+anaconda 環境已安裝flask
+
+啟動anaconda prompt
+切換到你的flask程式目錄夾
+執行python XXX.py
+```
 # server.py
 ```
 from flask import Flask
@@ -59,7 +84,7 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-#
+# post.py
 ```
 from flask import Flask
 from flask import request
@@ -85,7 +110,24 @@ def submit():
 if __name__ == '__main__':
     app.run()
 ```
-#
+
+```
+(base) E:\Dragon\flask\ch02>python post.py
+ * Serving Flask app "post" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [18/Mar/2021 11:48:18] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [18/Mar/2021 11:52:14] "[37mPOST / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [18/Mar/2021 11:52:16] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [18/Mar/2021 11:52:21] "[37mPOST / HTTP/1.1[0m" 200 -
+```
+```
+打開瀏覽器127.0.0.1:500 
+```
+# template1.py
 ```
 from flask import Flask
 app = Flask(__name__)
@@ -97,6 +139,21 @@ def hello():
 
 if __name__ == '__main__':
     app.run()
+```
+### hello.html ===> 檔案放在template目錄夾
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>第一個模版</title>
+</head>
+<body>
+	<h1> Flask 網站 </h1>
+    <h2> 歡迎光臨！ </h2>
+    <h4> 2019年11月12日 </h4>
+</body>
+</html>
 ```
 
 #
