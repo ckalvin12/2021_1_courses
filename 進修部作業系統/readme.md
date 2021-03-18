@@ -2,6 +2,8 @@
 # wordpress.com 免費方案
 ```
 https://wordpress.com/zh-tw/pricing/
+
+https://happyhackinghigh.wordpress.com/
 ```
 
 # 
