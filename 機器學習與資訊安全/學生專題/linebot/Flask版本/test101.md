@@ -1,5 +1,4 @@
-#
-
+# server.py
 ```
 from flask import Flask
 app = Flask(__name__)
@@ -16,6 +15,13 @@ if __name__ == '__main__':
     app.run()
 ```
 ```
+執行伺服器程式 ==> python server.py
+
+打開瀏覽器 127.0.0.1:5000
+```
+
+# 
+```
 from flask import Flask
 app = Flask(__name__)
 
@@ -27,6 +33,7 @@ def index():
 if __name__ == '__main__':
     app.run()
 ```
+#
 ```
 from flask import Flask
 app = Flask(__name__)
@@ -38,6 +45,7 @@ def hello(name):
 if __name__ == '__main__':
     app.run()
 ```
+#
 ```
 from flask import Flask
 from flask import request
@@ -51,6 +59,7 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
+#
 ```
 from flask import Flask
 from flask import request
@@ -76,6 +85,7 @@ def submit():
 if __name__ == '__main__':
     app.run()
 ```
+#
 ```
 from flask import Flask
 app = Flask(__name__)
@@ -88,6 +98,8 @@ def hello():
 if __name__ == '__main__':
     app.run()
 ```
+
+#
 ```
 from flask import Flask
 app = Flask(__name__)
