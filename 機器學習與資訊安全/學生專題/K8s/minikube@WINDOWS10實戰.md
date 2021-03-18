@@ -11,6 +11,9 @@ kind
 minikube ==> 測試用
 kubeadm ==> 正式用
 ```
+```
+https://github.com/tkanos/minikube_kubernetes_tutorial
+```
 ### kubectl
 ```
 The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. 
@@ -95,6 +98,16 @@ Other Commands:
 Use "minikube <command> --help" for more information about a given command.
 ```
 # kubectl
+```
+E:\>kubectl cluster-info
+
+E:\>kubectl get pod
+No resources found in default namespace.
+
+E:\>kubectl get services
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   8m35s
+```
 #
 ```
 E:\>kubectl cluster-info
