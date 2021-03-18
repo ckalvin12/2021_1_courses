@@ -94,6 +94,53 @@ Other Commands:
 
 Use "minikube <command> --help" for more information about a given command.
 ```
+# kubectl
+#
+```
+E:\>kubectl cluster-info
+Kubernetes control plane is running at https://192.168.99.100:8443
+KubeDNS is running at https://192.168.99.100:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+```
+```
+https://192.168.99.100:8443/
+
+{
+  "kind": "Status",
+  "apiVersion": "v1",
+  "metadata": {
+    
+  },
+  "status": "Failure",
+  "message": "forbidden: User \"system:anonymous\" cannot get path \"/\"",
+  "reason": "Forbidden",
+  "details": {
+    
+  },
+  "code": 403
+}
+```
+```
+https://192.168.99.100:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+{
+  "kind": "Status",
+  "apiVersion": "v1",
+  "metadata": {
+    
+  },
+  "status": "Failure",
+  "message": "services \"kube-dns:dns\" is forbidden: User \"system:anonymous\" cannot get resource \"services/proxy\" in API group \"\" in the namespace \"kube-system\"",
+  "reason": "Forbidden",
+  "details": {
+    "name": "kube-dns:dns",
+    "kind": "services"
+  },
+  "code": 403
+}
+```
+
 #
 ```
 E:\>kubectl -h
