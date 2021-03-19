@@ -37,4 +37,7 @@ https://www.runoob.com/python3/python3-tutorial.html
 ### Anaconda
 ```
 https://www.anaconda.com/products/individual
+
+Python 3.8
+64-Bit Graphical Installer (457 MB)
 ```
