@@ -41,3 +41,7 @@ https://www.anaconda.com/products/individual
 Python 3.8
 64-Bit Graphical Installer (457 MB)
 ```
+
+```
+https://jwlin.github.io/py-scraping-analysis-book/ch1/connect.html
+```
