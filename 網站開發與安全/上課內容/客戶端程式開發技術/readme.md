@@ -1,5 +1,43 @@
 
-#
+# 網頁美編
+```
+最潮 HTML5+CSS3 網頁版型設計：Standard Layout‧Grid Layout‧Single Page Layout
+吉田真麻   譯者： 李保宜, 楊瑩瑩  旗標出版社 2016/10/05
+
+標準框架式網頁 Standard Layout 
+網格框架式網頁 Grid Layout 
+單頁式框架網頁 Single Page Layout
+```
+```
+PART 1 標準框架式網頁 (Standard Layout)
+CHAPTER 01 PART1 的網站說明
+CHAPTER 02 撰寫 PART1 的基本程式碼
+CHAPTER 03 撰寫網頁標題區塊 (header) 程式碼
+CHAPTER 04 撰寫主要內容區塊 (main) 程式碼
+CHAPTER 05 撰寫側邊選單區塊 (side menu) 程式碼
+CHAPTER 06 撰寫底部區塊 (footer) 程式碼
+☆ 挑戰自我撰寫程式碼
+
+PART 2 網格框架式網頁 (Grid Layout)
+Chapter 07 PART 2 的網站說明
+Chapter 08 撰寫 PART 2 的基本程式碼
+Chapter 09 撰寫 box 區塊的程式碼
+Chapter 10 撰寫中型與大型 box 區塊的程式碼
+Chapter 11 撰寫導覽列的程式碼
+☆☆ 挑戰自我撰寫程式碼
+
+PART 3 單頁式框架網頁 (Single Page Layout)
+Chapter 12 PART 3的網站說明
+Chapter 13 撰寫 PART 3 的基本程式碼
+Chapter 14 撰寫網頁標題區塊 (header) 程式碼
+Chapter 15 撰寫 Section 1 (ABOUT ME) 的程式碼
+Chapter 16 撰寫 Section 2 (WORKS) 的程式碼
+Chapter 17 撰寫 Section 3 (MY SKILLS) 的程式碼
+Chapter 18 撰寫 Section 4 (CONTACT) 及底部區塊 (footer) 的程式碼
+Chapter 19 支援智慧型手機的準備
+Chapter 20 支援智慧型手機的程式碼
+☆☆☆ 挑戰自我撰寫程式碼
+```
 ```
 網頁美編的救星！零基礎也能看得懂的 HTML & CSS 網頁設計
 繁體中文/Mana 著/旗標科技出版日期：2021-02-22
@@ -14,6 +52,7 @@ HTML5 ‧ CSS3 最強圖解實戰講座 【第二版】
 繁體中文/草野 あけみ 著/旗標科技出版日期：2020-11-20
 https://www.flag.com.tw/bk/t/f0467
 ```
+
 
 # Web 安全開發指南 
 ```
