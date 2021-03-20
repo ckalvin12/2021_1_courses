@@ -7,7 +7,7 @@
 ★★★★★日本暢銷 NO.1 的網頁設計書！  
 榮登日本亞馬遜、丸善、淳久堂、蔦屋書店「網頁設計書」銷售冠軍！
 https://www.tenlong.com.tw/products/9789863126287
-
+http://www.flag.com.tw/DL.asp?F1469
 ```
 ```
 HTML5 ‧ CSS3 最強圖解實戰講座 【第二版】
