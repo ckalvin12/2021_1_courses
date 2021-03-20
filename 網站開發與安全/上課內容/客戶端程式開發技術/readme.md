@@ -1,5 +1,5 @@
 
-# 網頁美編
+# 網頁美編 推薦書
 ```
 最潮 HTML5+CSS3 網頁版型設計：Standard Layout‧Grid Layout‧Single Page Layout
 吉田真麻   譯者： 李保宜, 楊瑩瑩  旗標出版社 2016/10/05
