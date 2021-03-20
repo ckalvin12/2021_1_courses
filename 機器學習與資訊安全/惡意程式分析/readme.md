@@ -1,23 +1,19 @@
 #
 ```
 基于数据科学的恶意软件分析
-作者
-:
 （美）约书亚·萨克斯（Joshua Saxe）,希拉里•桑德斯（Hillary Sanders）著
-译者
-:
 何能强 严寒冰 译
-丛书名
-:
-网络空间安全技术丛书
-出版日期 :
 2020-02-21
 http://www.hzcourse.com/web/refbook/detail/8646/214
 
+https://www.malwaredatascience.com/
 https://nostarch.com/malwaredatascience
 ```
 ```
+下載ova
+https://www.malwaredatascience.com/ubuntu-virtual-machine
 
+the username is "osboxes.org" and the password is "osboxes.org"
 ```
 
 ```
