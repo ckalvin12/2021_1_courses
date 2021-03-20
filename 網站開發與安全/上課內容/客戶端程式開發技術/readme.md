@@ -28,6 +28,8 @@ Web安全开发指南
 
 ISBN:7115454086
 ISBN-13:9787115454089
+
+https://www.tenlong.com.tw/products/9787115454089
 ```
 
 ```
