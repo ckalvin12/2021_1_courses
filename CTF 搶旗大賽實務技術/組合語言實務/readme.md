@@ -83,6 +83,16 @@ https://www.sanmin.com.tw/Product/index/007183315
 
 6.3 x86與x86_64的調用約定 ==> 超級重要的 x86 and x86_64 Calling Convention
 6.3.1 cdecl（32位）
+     cdecl (C declaration) 呼叫約定是32 位元平臺最常見的一種約定，因為它是基於C 語言標準而設立的。
+     一般來說， GCC、Clang 與Visual Studio 的C 編譯器預設都會使用cdecl約定
+     4項主要特徵:
+    (1)參數按照相反的順序（也就是從右到左的順序）入stack
+    (2)eax 、ecx 與edx 需要由caller保存（叫作易失性的寄存器），
+      而其餘的通用寄存器則需要由callee來保存（叫作非易失性的寄存器）。
+      因此，如果想令eax 、ecx 及edx 寄存器在呼叫完函數之後還能保持呼叫之前的值，
+      那麼應該在主調函數中先將其保存起來，因為callee函數在執行過程中有可能會修改它們值
+    (3)在大多數情況下，返回值放在eax 寄存器裡，如果要返回的是浮點數，那麼應該放在st(0) 寄存器裡。
+    (4)Stack由caller負責清理
 6.3.2 stdcall（32位）
 6.3.3 x86_64（64位）
 
