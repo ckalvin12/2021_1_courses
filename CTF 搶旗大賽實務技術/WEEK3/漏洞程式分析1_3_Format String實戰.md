@@ -1,4 +1,8 @@
 # Chapter 4: Introduction to Format String Bugs
+```
+程式碼OK
+待解說
+```
 ## 格式化輸出之美  ascii.c
 ```
 #include <stdlib.h>
@@ -102,7 +106,7 @@ Error - supply a format string please
   }
 
 ```
-##
+## gen_upload_string.c
 ```
 #include <stdio.h>
 #include <stdlib.h>
