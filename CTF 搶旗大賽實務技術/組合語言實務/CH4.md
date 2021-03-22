@@ -288,6 +288,28 @@ xor rdi, rdi
 syscall
 ```
 # Program 4.3 Negative Division 
+
+# 4.3.2 資料定址
+```
+直接定址(direct addressing) ==> 直接使用由該識別字所代表的內存位址上的資料
+
+間接定址(indirect addressing) 
+==> 不直接使用某個記憶體位址上的資料，
+    而是把該資料也當成位址來確定另外一個記憶體位置，轉而使用那個位置上的資料
+
+NASM 的變數表示的就是其記憶體位址，而不是該位址中的值
+（如果想使用這個值，要用方括號括起來，例如[sum] ）
+
+編譯器 獲取變數的地址(address)
+
+GAS ==> MOVS $M, M/%R
+   範例:將32 位元變數sum 的記憶體位址保存到 esi 寄存器
+        MOVL $sum, %esi
+        
+NASM ==> MDV SIZE [M]/R, M
+       範例:將變數的記憶體位址保存到另一個變數
+         MOV DWORD [sumaddr], sum
+```
 # Program 4.4 Array 陣列
 
 ## x86/Program_4.4_GAS_Linux.s
