@@ -3,8 +3,10 @@
 
 
 ```
-# Program 4.1 Addition and Subtractio 4.2.2 加法與減法
-
+# Program 4.1 Addition and Subtractio 
+```
+4.2.2 加法與減法
+```
 ## x86/Program_4.1_GAS_Linux.s
 ```
 .data
@@ -302,19 +304,79 @@ int $0x80
 .end
 ```
 
-##
+## x86_64/Program_4.4_GAS_Linux.s
+```
+.data
+array: .quad 1, 2, 3, 4
+
+.text
+.global _main
+_main:
+
+# Load using byte offsets
+leaq array(%rip), %rsi
+movq (%rsi), %rax
+movq 8(%rsi), %rbx
+
+# Save using indices
+movq $2, %rdx
+movq $10, (%rsi, %rdx, 8)
+movq $3, %rdx
+movq $20, (%rsi, %rdx, 8)
+
+movq $60, %rax
+xorq %rdi, %rdi
+syscall
+.end
 ```
 
+## x86/Program_4.4_NASM.asm
+```
+SECTION .data
+array: DD 1, 2, 3, 4
+
+SECTION .text
+global _main
+_main:
+
+; Load using byte offsets
+mov eax, [array]
+mov ebx, [array + 4]
+
+; Save using indices
+mov edx, 2
+mov DWORD [array + edx * 4], 10
+mov edx, 3
+mov DWORD [array + edx * 4], 20
+
+mov eax, 1
+mov ebx, 0
+int 80h
 ```
 
-##
+## x86_64/Program_4.4_NASM.asm
 ```
+SECTION .data
+array: DQ 1, 2, 3, 4
 
+SECTION .text 
+global _main
+_main:
 
-```
+; Load using byte offsets
+lea rsi, [array]
+mov rax, [rsi]
+mov rbx, [rsi + 8]
 
-##
-```
+; Save using indices 
+mov rdx, 2
+mov QWORD [array+rdx*8], 10 
+mov rdx, 3
+mov QWORD [array+rdx*8], 20
+
+mov rax, 60
+xor rdi, rdi
+syscall
 
 ```
 
