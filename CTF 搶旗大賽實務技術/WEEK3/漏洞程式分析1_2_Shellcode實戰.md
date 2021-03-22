@@ -1,4 +1,8 @@
 # Chapter 3: Shellcode
+```
+程式 OK
+待解說
+```
 ## 1.c
 ```
 char shellcode[] = "\xbb\x00\x00\x00\x00"           
@@ -58,8 +62,7 @@ int main()
 編譯==>  gcc spawnshell.c -o spawnshell
 執行 ==> ./spawnshell
 ```
-### 
-
+### wack.c
 ```
 char shellcode[] = "\xbb\x00\x00\x00\x00"           
                    "\xb8\x01\x00\x00\x00"                  
