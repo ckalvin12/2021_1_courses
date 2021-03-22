@@ -41,7 +41,7 @@ https://www.sanmin.com.tw/Product/index/007183315
 2.3.4 指令流水線
 2.4 輸入與輸出
 
-第3章 匯編語言及其語法的基礎知識
+第3章 匯編語言及其語法的基礎知識  Assembly and Syntax Fundamentals
 3.1 簡介
 3.2 基本元素
 3.2.1 彙編代碼的五大支柱
@@ -50,7 +50,7 @@ https://www.sanmin.com.tw/Product/index/007183315
 3.3 定義數據
 3.4 寫出能夠正常運行的範例程序
 
-第4章 基本指令
+第4章 基本指令Basic Instructions
 4.1 簡介
 4.2 數據的移動與算術運算
 4.2.1 移動數據
@@ -64,26 +64,28 @@ https://www.sanmin.com.tw/Product/index/007183315
 4.3.3 數組
 4.3.4 改變數據的大小及類型
 
-第5章 中級指令
+第5章 中級指令 Intermediate Instructions
 5.1 簡介
-5.2 按位執行的布爾運算
+5.2 按位執行的布爾運算 Boolean Bitwise Operations
 
-5.3 分支
+5.3 分支 Branching  ==>想想你的C if--else 
 5.3.1 無條件跳轉
 5.3.2 有條件跳轉
 5.3.3 複合條件
 
-5.4 重複執行
+5.4 重複執行Repetition ==> C 程式: for   while   do-wwhile
 5.4.1 用CX/ECX/RCX計數器實現循環
 5.4.2 用開發者自定義的計數器實現循環
 
 第6章 函數
 6.1 簡介
-6.2 棧內存入門
-6.3 x86與x86_64的調用約定
+6.2 棧內存入門 ==>  stack 與 memory
+
+6.3 x86與x86_64的調用約定 ==> 超級重要的 x86 and x86_64 Calling Convention
 6.3.1 cdecl（32位）
 6.3.2 stdcall（32位）
 6.3.3 x86_64（64位）
+
 6.3.4 有用的細節
 
 6.7 重要的寄存器（32位和64位）
@@ -91,21 +93,20 @@ https://www.sanmin.com.tw/Product/index/007183315
 6.9 與平臺有關的注意事項
 
 
-第7章 與字符串有關的指令及結構體
+第7章 與字符串有關的指令String Instructions 及 結構體
 7.1 簡介
-7.2 輔助指令
-7.3 基本字符串指令
+7.2 輔助指令 Accessory Instructions
+7.3 基本字符串指令 String Primitive Instructions
 7.3.1 MOVS
 7.3.2 CMPS
 7.3.3 SCAS
 7.3.4 STOS
 7.3.5 LODS
 
-7.4 結構體
+7.4 結構體 Structures
 
 
-
-第8章 浮點運算
+第8章 浮點運算 Floating-Point Operations[第一次閱讀 可先略去]
 8.1 簡介
 8.2 浮點數的表示方式
 8.2.1 IEEE表示法
@@ -118,12 +119,10 @@ https://www.sanmin.com.tw/Product/index/007183315
 8.3.3 SSE
 8.3.4 XOP、FMA3/4、F16C――分化
 8.3.5 AVX
-
 8.6 重要的寄存器（32位和64位）
-
 第8章 補充材料 第8章中的程序
 
-第9章 內聯彙編Inline Assembly與宏Macros
+第9章 內聯彙編Inline Assembly與[Macros|巨集|宏]
 9.1 簡介
 
 9.2 內聯彙編
@@ -132,9 +131,9 @@ https://www.sanmin.com.tw/Product/index/007183315
 9.2.3 為各種彙編方言提供支持
 9.2.4 注意事項
 
-9.3 宏
-9.3.1 對比宏與函數
-9.3.2 定義並調用宏
+9.3 [Macros|巨集|宏]
+9.3.1 對比[Macros|巨集|宏]與函數
+9.3.2 定義並呼叫[Macros|巨集|宏]
 
 
 第10章 與處理器及體系結構有關的高級話題
@@ -144,12 +143,13 @@ https://www.sanmin.com.tw/Product/index/007183315
 10.2.2 處理器模式
 10.2.3 內存模型
 10.2.4 代碼範例
-10.3 中斷與系統調用
+
+10.3 中斷與系統呼叫 ===> 超級重要
 10.3.1 軟件中斷
 10.3.2 硬件中斷
-10.3.3 通過INT進行系統調用（舊方法）
-10.3.4 通過SYSENTER、SYSCALL及程序庫/API進行系統調用（新方法）
-第10章補充材料 第10章中的程序和資源
+10.3.3 通過INT進行系統呼叫（舊方法）===> 超級重要
+10.3.4 通過SYSENTER、SYSCALL及程序庫/API進行系統呼叫（新方法）===> 超級重要
+
 
 
 第11章 其他架構
