@@ -2,7 +2,22 @@
 ```
 http://www.ece.ualberta.ca/~cmpe490/documents/axiom/GNU_Assembler
 ```
-# Program 3.1 Sample Assembly Program - GAS, Clang/LLVM on Linux (32-bit)
+# 題目
+```
+首先定義一個32 位元的變數sum，然後將兩個數字相加25+50，最後把運算結果保存到該變數sum中。
+```
+```
+#include <stdio.h>
+
+int main(){
+  int sum =0 ;
+  
+  sum  = 25+50;
+  
+  return 0;
+}
+```
+# Sample Assembly Program - GAS, Clang/LLVM on Linux (32-bit)
 ```
 組合語言的保留字不區分大小寫
 
@@ -14,9 +29,7 @@ http://www.ece.ualberta.ca/~cmpe490/documents/axiom/GNU_Assembler
 
 Assembler directives are instructions to the assembler to perform various bookkeeping tasks, storage reservation, and other control functions. 
 ```
-```
-首先定義一個32 位元的變數sum，然後將兩個數字相加25+50，最後把運算結果保存到該變數sum中。
-```
+
 ```
 .data   ============>有初始化的變數 long sum = 0
 sum: .long 0
@@ -29,9 +42,27 @@ movl $50, %ebx
 addl %ebx, %eax ============> 把 %ebx的值加上 %eax的值 再將結果存入 %eax
 movl %eax, sum ============>把%eax的值 複製給sum 
 
-movl $1, %eax
+movl $1, %eax 
 movl $0, %ebx
 int $0x80 ============>呼叫系統中斷 結束程式
+.end
+```
+# Sample Assembly Program - GAS, Clang/LLVM on Linux (64-bit)
+```
+.data
+sum: .quad 0
+
+.text
+.global _main
+_main:
+mov $25, %rax
+mov $50, %rbx
+add %rbx, %rax
+mov %rax, sum(%rip)
+
+mov $60, %rax
+xor %rdi, %rdi
+syscall
 .end
 ```
 # Sample Assembly Program - NASM (32-bit)
@@ -50,4 +81,21 @@ mov DWORD [sum], eax
 mov eax, 1  ============>  eax <-- 1
 mov ebx, 0  ============>  ebx <-- 0 
 int 80h     ============>呼叫系統中斷 結束程式
+```
+# Sample Assembly Program - NASM (64-bit)
+```
+SECTION .data 
+sum: DQ 0
+
+SECTION .text
+global _main
+_main:
+mov rax, 25
+mov rbx, 50 
+add rax, rbx
+mov QWORD [sum], rax
+
+mov rax, 60
+xor rdi, rdi
+syscall
 ```
