@@ -3,12 +3,12 @@
 https://docs.microsoft.com/en-us/sysinternals/downloads/
 ```
 ```
-Sysinternals Process(行程==>惡意程式?) Utilities
-Sysinternals Security(安全) Utilities
-Sysinternals File(檔案) and Disk(硬碟) Utilities(公用程式)
-Sysinternals Networking(網路) Utilities
-Sysinternals System Information(系統資訊) Utilities
-
+1.Sysinternals Process(行程==>惡意程式?) Utilities
+2.Sysinternals Security(安全) Utilities
+3.Sysinternals File(檔案) and Disk(硬碟) Utilities(公用程式)
+4.Sysinternals Networking(網路) Utilities
+5.Sysinternals System Information(系統資訊) Utilities
+6.Sysinternals Miscellaneous(其他) Utilities
 ```
 ## Sysinternals Process(行程==>惡意程式?) Utilities
 ```
@@ -196,4 +196,65 @@ ShareEnum ==> Scan file shares on your network and view their security settings
 超重要 TCPView ==> Active socket command-line viewer.
 
 Whois ==>See who owns an Internet address.
+```
+# Sysinternals Miscellaneous(其他) Utilities
+```
+AD Explorer
+Active Directory Explorer is an advanced Active Directory (AD) viewer and editor.
+
+AdRestore
+Restore tombstoned Active Directory objects in Server 2003 domains.
+
+Autologon
+Bypass password screen during logon.
+
+BgInfo
+This fully-configurable program automatically generates desktop backgrounds that include important information about the system including IP addresses, computer name, network adapters, and more.
+
+BlueScreen
+This screen saver not only accurately simulates Blue Screens, but simulated reboots as well (complete with CHKDSK), and works on Windows Vista, Server 2008 and higher.
+
+Ctrl2cap
+This is a kernel-mode driver that demonstrates keyboard input filtering just above the keyboard class driver in order to turn caps-locks into control keys. Filtering at this level allows conversion and hiding of keys before NT even "sees" them. Ctrl2cap also shows how to use NtDisplayString() to print messages to the initialization blue-screen.
+
+DebugView
+Another first from Sysinternals: 
+This program intercepts calls made to DbgPrint by device drivers and 
+OutputDebugString made by Win32 programs. 
+It allows for viewing and recording of debug session output on your local machine 
+or across the Internet without an active debugger.
+
+Desktops
+This new utility enables you to create up to four virtual desktops 
+and to use a tray interface or hotkeys to preview 
+what’s on each desktop and easily switch between them.
+
+Hex2dec ==> Convert hex numbers to decimal and vice versa.
+
+NotMyFault
+Notmyfault is a tool that you can use to crash, hang, 
+and cause kernel memory leaks on your Windows system.
+
+PsLogList
+Dump event log records.
+
+PsTools
+The PsTools suite includes command-line utilities for listing the processes 
+running on local or remote computers, running processes remotely,
+rebooting computers, dumping event logs, and more.
+
+RegDelNull
+Scan for and delete Registry keys that contain embedded null-characters 
+that are otherwise undeleteable by standard Registry-editing tools.
+
+Registry Usage (RU)
+View the registry space usage for the specified registry key.
+
+RegJump
+Jump to the registry path you specify in Regedit.
+
+Strings ==> Search for ANSI and UNICODE strings in binary images.
+
+ZoomIt
+Presentation utility for zooming and drawing on the screen.
 ```
