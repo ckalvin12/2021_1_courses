@@ -1,9 +1,13 @@
 #
 ```
+https://docs.microsoft.com/en-us/sysinternals/downloads/
+```
+```
 Sysinternals Process(行程==>惡意程式?) Utilities
 Sysinternals Security(安全) Utilities
 Sysinternals File(檔案) and Disk(硬碟) Utilities(公用程式)
 Sysinternals Networking(網路) Utilities
+Sysinternals System Information(系統資訊) Utilities
 
 ```
 ## Sysinternals Process(行程==>惡意程式?) Utilities
@@ -105,6 +109,57 @@ Launch programs as a different user via a convenient shell context-menu entry.
 Sigcheck ==> Dump file version information and verify that images on your system are digitally signed.
 
 超重要 Sysmon ==> Monitors and reports key system activity via the Windows event log.
+```
+## Sysinternals System Information(系統資訊) Utilities
+```
+Autoruns
+See what programs are configured to startup automatically when your system boots and you login. 
+Autoruns also shows you the full list of Registry and file locations 
+where applications can configure auto-start settings.
+
+ClockRes
+View the resolution of the system clock, which is also the maximum timer resolution.
+
+Coreinfo
+Coreinfo is a command-line utility that shows you the mapping between logical processors and the physical processor, NUMA node, and socket on which they reside, as well as the cache’s assigned to each logical processor.
+
+Handle
+This handy command-line utility will show you what files are open by which processes, and much more.
+
+重要 LiveKd ==> Use Microsoft kernel debuggers to examine a live system.
+
+LoadOrder
+See the order in which devices are loaded on your WinNT/2K system.
+
+LogonSessions
+List the active logon sessions on a system.
+
+PendMoves
+Enumerate the list of file rename and delete commands that will be executed the next boot.
+
+Process Explorer
+Find out what files, registry keys and other objects processes have open, which DLLs they have loaded, and more. This uniquely powerful utility will even show you who owns each process.
+
+Process Monitor
+Monitor file system, Registry, process, thread and DLL activity in real-time.
+
+ProcFeatures
+This applet reports processor and Windows support for Physical Address Extensions and No Execute buffer overflow protection.
+
+PsInfo ==> Obtain information about a system.
+
+PsLoggedOn
+Show users logged on to a system
+
+PsTools
+The PsTools suite includes command-line utilities for listing the processes running on local or remote computers, running processes remotely, rebooting computers, dumping event logs, and more.
+
+RAMMap
+An advanced physical memory usage analysis utility that 
+presents usage information in different ways on its several different tabs.
+
+WinObj
+The ultimate Object Manager namespace viewer is here.
 ```
 ## Sysinternals File(檔案) and Disk(硬碟) Utilities(公用程式)
 ```
