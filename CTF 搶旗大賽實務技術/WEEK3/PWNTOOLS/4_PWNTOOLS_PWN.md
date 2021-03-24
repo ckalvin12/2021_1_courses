@@ -2,7 +2,7 @@
 
 ```
 Level 1： 
-1-1.pass
+1-1.pass  ==> gdb-peda
 1-2.gohome
 1-4.echo_server
 
@@ -16,7 +16,6 @@ Level 1：
 
 Pwn-1.baby_fmt
 Pwn-2.fmt-1
-
 ```
 
 
