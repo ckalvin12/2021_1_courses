@@ -5,7 +5,14 @@
 PWN 解題
 
 ```
+##
+```
+6.hello world
+題目敘述
+你連的到伺服器嗎?
 
+nc 120.114.62.201 2405
+```
 ## 1.PPC_Ez/ 3rd 分析與解題
 ```
 可以幫我找出第三大的數字嗎?
@@ -82,4 +89,49 @@ python3 test.py
 [*] Switching to interactive mode
 CTF{>>>>>>>解答在這裡>>>>>>>>>}
 [*] Got EOF while reading in interactive
+```
+## 2.beautify
+```
+題目敘述
+幫我美化一下這句子
+
+規則1 : 把所有 ' -_' 換成 ' '
+
+規則2 : 把所有英⽂文字母換成小寫
+
+nc 120.114.62.201 2401
+```
+
+```
+#!/usr/bin/env python3
+from pwn import *
+
+r = remote('127.0.0.1', 20000)
+
+r.recvlines(8)
+r.recvuntil('sentence : ')
+sentence = r.recvline().strip().decode()
+ans = sentence.lower().replace('-', ' ').replace('_', ' ')
+r.sendlineafter('answer : ', ans)
+
+r.interactive()
+```
+
+## 4.count
+```
+題目敘述
+你會數⼀到一百嗎?
+
+nc 120.114.62.201 2403
+```
+```
+#!/usr/bin/env python3
+from pwn import *
+
+r = remote('127.0.0.1', 20000)
+
+for i in range(1, 100 + 1):
+    r.sendlineafter('you say?\n', str(i))
+
+r.interactive()
 ```
