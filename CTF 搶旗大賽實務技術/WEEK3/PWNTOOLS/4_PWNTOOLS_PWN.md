@@ -20,6 +20,7 @@ Pwn-2.fmt-1
 
 
 ```
-
-
+Buffer Overflow
+GOT-hijacking
+Format String
 ```
