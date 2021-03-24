@@ -16,6 +16,9 @@ Level 1：
 
 Pwn-1.baby_fmt
 Pwn-2.fmt-1
+Pwn-2.fmt-2  ==> printf() 可以寫入
+Pwn-2.fmt-3  ==> printf() 可以寫入
+
 ```
 
 
