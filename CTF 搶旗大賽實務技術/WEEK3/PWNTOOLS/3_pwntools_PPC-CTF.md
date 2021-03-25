@@ -3,18 +3,29 @@
 
 
 ```
-##
+## 1.熟悉連線指令  6.hello world
 ```
-6.hello world
+
 題目敘述
 你連的到伺服器嗎?
 
-nc 120.114.62.201 2405
-```
+nc 120.114.62.216 2405
+[每一次上課用的IP 與 Port 原則上都會改變, 請仔細讀題]
 ```
 
+#### 解答
 ```
-## 1.PPC_Ez/ 3rd 分析與解題
+nc 120.114.62.216 2405
+
+===== Welcome to CTF =====
+You successfully reach this problem
+Congratulation!!!
+Wait for a few second, let me get you the flag
+
+Here you go : CTF{XXXXXXXXXXXXXXXXXX}
+
+```
+## 2.PPC_Ez/ 3rd 分析與解題
 ```
 可以幫我找出第三大的數字嗎?
 
@@ -124,12 +135,14 @@ r.interactive()
 你會數⼀到一百嗎?
 
 nc 120.114.62.201 2403
+nc 120.114.62.216 2403
+
 ```
 ```
 #!/usr/bin/env python3
 from pwn import *
 
-r = remote('127.0.0.1', 20000)
+r = remote('120.114.62.216',2403)
 
 for i in range(1, 100 + 1):
     r.sendlineafter('you say?\n', str(i))
