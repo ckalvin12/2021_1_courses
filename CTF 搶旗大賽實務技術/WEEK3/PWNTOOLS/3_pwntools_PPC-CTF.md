@@ -1,6 +1,8 @@
 # pwntools PPC-CTF實戰
 ```
-
+1.熟悉連線指令  6.hello world
+2.PPC_Ez/ 3rd 分析與解題
+3.PPC_Ez/ beautify 分析與解題
 
 ```
 ## 1.熟悉連線指令  6.hello world
@@ -113,12 +115,25 @@ CTF{>>>>>>>解答在這裡>>>>>>>>>}
 
 nc 120.114.62.201 2401
 ```
+###
+```
+nc 120.114.62.216 2401
+===== Welcome to pretty shop =====
+Can you help me beautify these sentences?
+Rule 1 : change all ' -_' to ' '
+Rule 2 : change all alphabet to lower case
+----- Example -----
+sentence : ThiS-iS_tEst tRY to BeautIfY_mE
+answer : this is test try to beautify me
+----- Now You Turn -----
+sentence : HUnteR-cOntEMpT_OWe gift_TRAP_MisS-DefEat cOnfrONTatIon paYMeNT-cIgAretTE_HaNd_inNOCent_pEn qUAiNT-S
 
+```
 ```
 #!/usr/bin/env python3
 from pwn import *
 
-r = remote('127.0.0.1', 20000)
+r = remote('120.114.62.216', 2401)
 
 r.recvlines(8)
 r.recvuntil('sentence : ')
@@ -128,7 +143,15 @@ r.sendlineafter('answer : ', ans)
 
 r.interactive()
 ```
+```
+python3 t2.py
+[+] Opening connection to 120.114.62.216 on port 2401: Done
+[*] Switching to interactive mode
+Accepted
+Here is your flag : CTF{XXXXXXXXXXXXXXXXXXXXXXXXXX}
+[*] Got EOF while reading in interactive
 
+```
 ## 4.count
 ```
 題目敘述
@@ -136,8 +159,8 @@ r.interactive()
 
 nc 120.114.62.201 2403
 nc 120.114.62.216 2403
-
 ```
+## 解答
 ```
 #!/usr/bin/env python3
 from pwn import *
@@ -148,4 +171,85 @@ for i in range(1, 100 + 1):
     r.sendlineafter('you say?\n', str(i))
 
 r.interactive()
+```
+
+```
+python3 t3.py 
+[+] Opening connection to 120.114.62.216 on port 2403: Done
+[*] Switching to interactive mode
+CTF{XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}
+[*] Got EOF while reading in interactive
+```
+
+# 難題
+```
+1.calculator
+題目敘述
+你能幫我解一些方程式嗎？
+
+nc 120.114.62.201 5119
+nc 120.114.62.216 5119
+
+```
+### 分析
+```
+nc 120.114.62.216 5119
+===== Welcome to the magic calculator =====
+We got some equations here, but the operator is missing.
+Can you help us?
+----- wave 1/100 -----
+5 ? 9 = -4
+which operator(+/-/*)?
+```
+```
+python3
+Python 3.7.3rc1 (default, Mar 13 2019, 11:01:15) 
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from pwn import *
+>>> r = remote("120.114.62.216", 5119)
+[x] Opening connection to 120.114.62.216 on port 5119
+[x] Opening connection to 120.114.62.216 on port 5119: Trying 120.114.62.216
+[+] Opening connection to 120.114.62.216 on port 5119: Done
+>>> r
+<pwnlib.tubes.remote.remote object at 0x7f07335e1358>
+>>> r.recvuntil("Can you help us?\n")
+b'===== Welcome to the magic calculator =====\nWe got some equations here, but the operator is missing.\nCan you help us?\n'
+>>> r.recvline()
+b'----- wave 1/100 -----\n'
+>>> equation = r.recvline().decode('ascii')
+>>> equation 
+'40 ? 3 = 37\n'
+>>> equation.replace('?', '{}')
+'40 {} 3 = 37\n'
+>>> equation.replace('?', '{}').replace('=', '==')
+'40 {} 3 == 37\n'
+```
+```
+#!/usr/bin/env python3
+from pwn import *
+
+r = remote("120.114.62.216", 5119)
+r.recvuntil("Can you help us?\n")
+
+for i in range(100):
+    r.recvline()
+    equation = r.recvline().decode('ascii')
+    equation = equation.replace('?', '{}').replace('=', '==')
+    r.recvuntil('? ')
+    for o in "+-*":
+        if eval(equation.format(o)):
+            r.sendline(o)
+            break
+
+r.interactive()
+```
+### 執行畫面
+```
+python3 t5.py
+
+[+] Opening connection to 120.114.62.216 on port 5119: Done
+[*] Switching to interactive mode
+MyFirstCTF{XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX} <====解答在此
+[*] Got EOF while reading in interactive
 ```
