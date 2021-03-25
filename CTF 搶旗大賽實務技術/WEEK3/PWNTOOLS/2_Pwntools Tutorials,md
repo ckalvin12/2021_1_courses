@@ -79,7 +79,20 @@ sendline(line) -發送資料和換行符
 pack(int) -發送字大小的壓縮整數
 unpack() -接收和解包一個字長的整數
 ```
-```
 
+# auto pwnning
+```
+https://guyinatuxedo.github.io/45-automatic_exploit_generation/index.html
+
+0.) Download Challenge
+1.) Get Binary Attributes/Mitigations
+2.) Run it to see what it does
+3.) Load it into Ghidra
+4.) Analyze code, find vulnerabilities and alternate win conditions
+5.) Look at bugs and things the binary has, decide on attack to attempt
+6.) Write exploit script to launch attack
+7.) Test it out locally
+8.) Run against remote server, get flag and submit it
+9.) Fix stupid mistakes made in previous steps
 
 ```
