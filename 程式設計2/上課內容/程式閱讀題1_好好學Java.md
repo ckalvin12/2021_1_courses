@@ -8,11 +8,10 @@ ISBN-13:9787302554189
 https://www.tenlong.com.tw/products/9787302554189
 ```
 
-# 第二章 數學
+# 第2章 數學運算
 ```
 //2.1
 package com.arithmetic.math;
-
 
 public class Angle {
 	public static void main(String[] args) {
@@ -40,7 +39,6 @@ public class Angle {
 package com.arithmetic.math;
 
 import java.util.Random;
-
 
 public class Rand {
 
