@@ -1,5 +1,6 @@
-# registers can be grouped into four categories:
+# registers 暫存器
 ```
+registers can be grouped into four categories:
 [1]General purpose==>mathematical operations
        EAX, EBX, and ECX 
        ==>can be used to store data and addresses, 
