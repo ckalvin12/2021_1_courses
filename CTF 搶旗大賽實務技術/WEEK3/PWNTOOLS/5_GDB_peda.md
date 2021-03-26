@@ -16,7 +16,13 @@ https://www.cntofu.com/book/46/gdb/gdbchang_yong_zhi_ling.md
 ```
 ## 範例學習
 ```
+gdb命令
+https://man.linuxde.net/gdb
+```
 
+```
+【GDB】gdb除錯命令大全
+https://www.itread01.com/content/1547902998.html
 ```
 # peda的使用
 ```
