@@ -128,31 +128,8 @@ sentence : ThiS-iS_tEst tRY to BeautIfY_mE
 answer : this is test try to beautify me
 ----- Now You Turn -----
 sentence : HUnteR-cOntEMpT_OWe gift_TRAP_MisS-DefEat cOnfrONTatIon paYMeNT-cIgAretTE_HaNd_inNOCent_pEn qUAiNT-S
-
 ```
-```
-#!/usr/bin/env python3
-from pwn import *
 
-r = remote('120.114.62.216', 2401)
-
-r.recvlines(8)
-r.recvuntil('sentence : ')
-sentence = r.recvline().strip().decode()
-ans = sentence.lower().replace('-', ' ').replace('_', ' ')
-r.sendlineafter('answer : ', ans)
-
-r.interactive()
-```
-```
-python3 t2.py
-[+] Opening connection to 120.114.62.216 on port 2401: Done
-[*] Switching to interactive mode
-Accepted
-Here is your flag : CTF{XXXXXXXXXXXXXXXXXXXXXXXXXX}  <====解答在此
-[*] Got EOF while reading in interactive
-
-```
 ## 4.count
 ```
 題目敘述
@@ -160,26 +137,6 @@ Here is your flag : CTF{XXXXXXXXXXXXXXXXXXXXXXXXXX}  <====解答在此
 
 nc 120.114.62.201 2403
 nc 120.114.62.216 2403
-```
-## 解答
-```
-#!/usr/bin/env python3
-from pwn import *
-
-r = remote('120.114.62.216',2403)
-
-for i in range(1, 100 + 1):
-    r.sendlineafter('you say?\n', str(i))
-
-r.interactive()
-```
-
-```
-python3 t3.py 
-[+] Opening connection to 120.114.62.216 on port 2403: Done
-[*] Switching to interactive mode
-CTF{XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}  <====解答在此
-[*] Got EOF while reading in interactive
 ```
 
 # 難題
@@ -225,32 +182,4 @@ b'----- wave 1/100 -----\n'
 '40 {} 3 = 37\n'
 >>> equation.replace('?', '{}').replace('=', '==')
 '40 {} 3 == 37\n'
-```
-```
-#!/usr/bin/env python3
-from pwn import *
-
-r = remote("120.114.62.216", 5119)
-r.recvuntil("Can you help us?\n")
-
-for i in range(100):
-    r.recvline()
-    equation = r.recvline().decode('ascii')
-    equation = equation.replace('?', '{}').replace('=', '==')
-    r.recvuntil('? ')
-    for o in "+-*":
-        if eval(equation.format(o)):
-            r.sendline(o)
-            break
-
-r.interactive()
-```
-### 執行畫面
-```
-python3 t5.py
-
-[+] Opening connection to 120.114.62.216 on port 5119: Done
-[*] Switching to interactive mode
-MyFirstCTF{XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX} <====解答在此
-[*] Got EOF while reading in interactive
 ```
