@@ -15,7 +15,7 @@
 4.3.4 改變數據的大小及類型
 
 ```
-# Program 4.1 Addition and Subtractio 
+# Program 4.1 Addition and Subtraction
 ```
 4.2.2 加法與減法
 ```
