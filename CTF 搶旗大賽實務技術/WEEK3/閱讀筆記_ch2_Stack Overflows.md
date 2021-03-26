@@ -132,5 +132,8 @@ In other implementations, it points to the first free address.第一個空著的
 see 簡報
 ```
 
-#
+# Functions and the Stack
+```
+使用stack ==> Function call 函數呼叫
 
+```
