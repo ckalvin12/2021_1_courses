@@ -1,3 +1,23 @@
+# gdb
+```
+
+gdb 除錯技術
+https://www.cntofu.com/book/46/gdb/187.md
+
+Debugging Under Unix: gdb Tutorial
+https://www.cs.cmu.edu/~gilpin/tutorial/
+
+https://github.com/cyrus-and/gdb-dashboard
+```
+## gdb指令
+```
+gdb常用指令
+https://www.cntofu.com/book/46/gdb/gdbchang_yong_zhi_ling.md
+```
+## 範例學習
+```
+
+```
 # peda的使用
 ```
 https://www.jianshu.com/p/283b5466684b
