@@ -1,4 +1,14 @@
-#
+# Assembly and Syntax Fundamentals
+```
+第3章 匯編語言及其語法的基礎知識  
+3.1 簡介
+3.2 基本元素
+3.2.1 彙編代碼的五大支柱
+3.2.2 字面量
+3.2.3 標簽與注釋
+3.3 定義數據
+3.4 寫出能夠正常運行的範例程序
+```
 ```
 http://www.ece.ualberta.ca/~cmpe490/documents/axiom/GNU_Assembler
 ```
