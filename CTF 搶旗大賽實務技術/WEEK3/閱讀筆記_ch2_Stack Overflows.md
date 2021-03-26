@@ -47,7 +47,6 @@ array 1 : address is 5dc68444 and value is 2
 array 2 : address is 5dc68448 and value is 3
 array 3 : address is 5dc6844c and value is 4
 array 4 : address is 5dc68450 and value is 5
-
 ```
 
 # Stack overflows
@@ -96,7 +95,40 @@ root@kali:~# ./bf1
 
 ## 寫入的問題 bufferoverflow 2
 ```
+#include <stdio.h>
+#include <string.h>
+
+int main () 
+{
+   int array[5];
+   int i;
+
+   for (i = 0; i <= 255; i++ )
+   {
+      array[i] = 10;
+   }
+   
+   return 0;
+}
+```
+```
+root@kali:~# gedit bf2.c
+root@kali:~# gcc bf2.c -o bf2
+root@kali:~# ./bf2
+Segmentation fault  <=======當 當 當 當
+```
+# The Stack <==> Buffer <==> Array
+```
+The boundary of the stack is defined by the extended stack pointer (ESP) register, 
+which points to the top of the stack.
+
+Stack 的運算指令: push(壓入) pop
+ESP指向:
+IA32 ==> ESP points to the last address used by the stack. 
+In other implementations, it points to the first free address.第一個空著的位置
+```
 
 ```
 
+```
 
