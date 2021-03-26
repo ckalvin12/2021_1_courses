@@ -219,4 +219,28 @@ ds             0x0                 0x0
 es             0x0                 0x0
 fs             0x0                 0x0
 gs             0x0                 0x0
+
+使用vmmap 查看⽬前程式的記憶體分佈，以及 rwx 權限設定
+
+gdb-peda$ vmmap
+Start              End                Perm	Name
+0x00400000         0x00401000         r-xp	/root/Downloads/pass
+0x00600000         0x00601000         r--p	/root/Downloads/pass
+0x00601000         0x00602000         rw-p	/root/Downloads/pass
+0x00007ffff7def000 0x00007ffff7e11000 r--p	/usr/lib/x86_64-linux-gnu/libc-2.28.so
+0x00007ffff7e11000 0x00007ffff7f59000 r-xp	/usr/lib/x86_64-linux-gnu/libc-2.28.so
+0x00007ffff7f59000 0x00007ffff7fa5000 r--p	/usr/lib/x86_64-linux-gnu/libc-2.28.so
+0x00007ffff7fa5000 0x00007ffff7fa6000 ---p	/usr/lib/x86_64-linux-gnu/libc-2.28.so
+0x00007ffff7fa6000 0x00007ffff7faa000 r--p	/usr/lib/x86_64-linux-gnu/libc-2.28.so
+0x00007ffff7faa000 0x00007ffff7fac000 rw-p	/usr/lib/x86_64-linux-gnu/libc-2.28.so
+0x00007ffff7fac000 0x00007ffff7fb2000 rw-p	mapped
+0x00007ffff7fd0000 0x00007ffff7fd3000 r--p	[vvar]
+0x00007ffff7fd3000 0x00007ffff7fd5000 r-xp	[vdso]
+0x00007ffff7fd5000 0x00007ffff7fd6000 r--p	/usr/lib/x86_64-linux-gnu/ld-2.28.so
+0x00007ffff7fd6000 0x00007ffff7ff4000 r-xp	/usr/lib/x86_64-linux-gnu/ld-2.28.so
+0x00007ffff7ff4000 0x00007ffff7ffc000 r--p	/usr/lib/x86_64-linux-gnu/ld-2.28.so
+0x00007ffff7ffc000 0x00007ffff7ffd000 r--p	/usr/lib/x86_64-linux-gnu/ld-2.28.so
+0x00007ffff7ffd000 0x00007ffff7ffe000 rw-p	/usr/lib/x86_64-linux-gnu/ld-2.28.so
+0x00007ffff7ffe000 0x00007ffff7fff000 rw-p	mapped
+0x00007ffffffde000 0x00007ffffffff000 rw-p	[stack]
 ```
