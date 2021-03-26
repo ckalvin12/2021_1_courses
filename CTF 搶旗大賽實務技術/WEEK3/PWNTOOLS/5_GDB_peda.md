@@ -243,4 +243,18 @@ Start              End                Perm	Name
 0x00007ffff7ffd000 0x00007ffff7ffe000 rw-p	/usr/lib/x86_64-linux-gnu/ld-2.28.so
 0x00007ffff7ffe000 0x00007ffff7fff000 rw-p	mapped
 0x00007ffffffde000 0x00007ffffffff000 rw-p	[stack]
+
+gdb-peda$ checksec
+CANARY    : disabled
+FORTIFY   : disabled
+NX        : ENABLED
+PIE       : disabled
+RELRO     : Partial
+
+http://manpages.ubuntu.com/manpages/disco/man1/checksec.1.html
+
+checksec - check executables and kernel properties
+checksec  is  a  bash script used to check the properties of executables (like PIE, RELRO,
+PaX, Canaries, ASLR, Fortify Source) and kernel  security  options  (like  GRSecurity  and
+SELinux).
 ```
