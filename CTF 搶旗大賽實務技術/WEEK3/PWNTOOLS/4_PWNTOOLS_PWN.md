@@ -175,11 +175,6 @@ Billy left his key in the locked room.
 However, he forgot the token of the room.
 Do you know what's the key?AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Cannot open door. QwQ
-[Inferior 1 (process 3851) exited normally]
-Warning: not running
-gdb-peda$ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-Undefined command: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".  Try "help".
-
 ```
 # 逆向
 ```
@@ -206,6 +201,8 @@ r2 pass
 0x00400950    1 2            sym.__libc_csu_fini
 0x00400954    1 9            sym._fini
 
+s main
+VV
 ```
 
 #
