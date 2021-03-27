@@ -42,8 +42,7 @@ int main(){
 }
 ```
 ```
-# 1-1c pass
-```
+
 # nc 120.114.62.213 6125
 from pwn import *
 
