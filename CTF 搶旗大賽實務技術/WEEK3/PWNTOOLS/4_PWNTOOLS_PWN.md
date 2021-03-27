@@ -169,12 +169,22 @@ Dump of assembler code for function main:
 End of assembler dump.
 gdb-peda$ b *0x00000000004008b9 
 Breakpoint 1 at 0x4008b9
+
+
+checksec
+
+vmmap
+
+
 gdb-peda$ r
 Starting program: /root/Downloads/pass 
 Billy left his key in the locked room.
 However, he forgot the token of the room.
 Do you know what's the key?AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Cannot open door. QwQ
+
+
+
 ```
 # 逆向
 ```
