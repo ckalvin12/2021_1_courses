@@ -44,6 +44,22 @@ int main(){
   return 0;
 }
 ```
+# 初步探索
+## 執行一下程式
+```
+./pass
+Billy left his key in the locked room.
+However, he forgot the token of the room.
+Do you know what's the key?AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Cannot open door. QwQ
+```
+## 
+```
+file pass
+
+srings pass
+
+```
 # 使用gdb
 ```
 root@kali:~# cd Downloads/
