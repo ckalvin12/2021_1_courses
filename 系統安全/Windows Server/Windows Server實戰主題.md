@@ -16,7 +16,25 @@ Chapter 3｜Windows Server 2019 基本環境
 
 Chapter 4｜本機使用者與群組帳戶
 Chapter 7｜檔案權限與共用資料夾
+
 Chapter 9｜群組原則與安全設定 ==> 本機電腦
+    9-4 本機安全性原則 security settings
+     gpedit.msc==> 本機電腦 原則==>安全性設定
+     帳戶原則-密碼原則
+     帳戶原則-帳戶鎖定原則
+     本機原則－稽核政策(audit Policy)
+     本機原則－使用者權限指派(User Rights Managements)[超多]
+     本機原則－安全性選項(security options)
+     
+    9-6 稽核資源的使用
+    gpedit.msc ==> 設定各種觸發的條件
+    eventviewer ==> 檢視觸發的事件
+    
+    稽核登入事件
+    稽核檔案存取行為
+    稽核印表機的存取行為
+
+
 Chapter 10｜磁碟系統的管理
 
 Chapter 12｜系統啟動的疑難排除
