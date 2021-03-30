@@ -1,13 +1,16 @@
 # 成績計算方式
 ```
-期中平時: Windows server 系統實戰報告
-期中考: Windows Server 滲透測試報告
-期末平時:Docker企業雲實測
-期末考: 雲端安全初探
 
-加分報告: 
+期中考: Windows Server 2019技術與實戰報告
+期末考: Windows Server 2019 AD 技術與實戰報告
+        Windows Server 滲透測試報告 
+
+加分報告與平時分數: 
 Sysinternals技術報告
 Powershell技術報告
+
+期末平時:Docker企業雲實測
+雲端安全初探
 ```
 ### 報告範本格式
 ```
