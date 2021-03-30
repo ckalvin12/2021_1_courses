@@ -112,8 +112,10 @@ Chapter 15｜架設 IIS 網站 ==> web server
          可針對單一檔案、資料夾或網站來設定
          選用順序：匿名驗證、Windows驗證、摘要式驗證、基本驗證
     透過IP位址來限制連線
-
-
+    透過NTFS 或ReFS權限來增加安全性
+    遠端管理IIS網站與功能委派
+       lab:IIS網頁伺服器的遠端管理設定
+    安裝「管理服務」與建立「IIS管理員使用者」帳戶
 Chapter 16｜PKI 與 https 網站 ==> https 
 
 Chapter 11｜分散式檔案系統
