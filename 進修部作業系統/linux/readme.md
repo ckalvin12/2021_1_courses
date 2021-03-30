@@ -5,7 +5,12 @@
 ```
 #
 ```
+Linux 作業系統
+核心(kernels)與shell
+   lab: 檢查linux 版本所使用的核心
 Linux 檔案系統架構
+基本linux cpmmand
+檔案權限設定
 ```
 
 # Linux 檔案系統架構
