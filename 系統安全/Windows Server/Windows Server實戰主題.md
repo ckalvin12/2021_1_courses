@@ -85,6 +85,35 @@ Chapter 13｜利用 DHCP 自動指派 IP 位址 ==> DHCP server
 Chapter 14｜解析 DNS 主機名稱 ==> DNS server
 
 Chapter 15｜架設 IIS 網站 ==> web server
+
+安裝 網頁伺服器(IIS) 
+網頁儲存地點的設定
+   預設:%SystemDrive%\inetpub\wwwroot (主目錄)
+   主目錄可變更為
+         本機電腦的其他資料夾
+         其他電腦的共用資料夾：指定使用者帳戶名稱與密碼
+   預設的首頁檔案
+   Default Web Site的首頁檔
+   新增default.htm檔案
+   HTTP重新導向 == 設定
+   實體目錄與虛擬目錄
+     實體目錄實例演練
+     虛擬目錄實例演練
+   建立多個網站
+   IIS網站的安全性設定
+    驗證使用者的名稱與密碼
+    驗證方法
+        匿名驗證：不需要輸入使用者名稱與密碼(使用群組帳號IUSR)
+        基本驗證：需使用者名稱與密碼，但並沒有被加密
+        摘要式驗證：IIS電腦必須加入AD DS網域、需AD DS使用者
+        Windows驗證：使用者名稱與密碼會經過雜湊處理後再傳送
+        預設只啟用匿名驗證方式，其他3種需另外安裝
+    驗證方法的設定
+         可針對單一檔案、資料夾或網站來設定
+         選用順序：匿名驗證、Windows驗證、摘要式驗證、基本驗證
+    透過IP位址來限制連線
+
+
 Chapter 16｜PKI 與 https 網站 ==> https 
 
 Chapter 11｜分散式檔案系統
