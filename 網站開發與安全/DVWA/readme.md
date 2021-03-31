@@ -5,6 +5,10 @@ root@kali:~# docker image ls
 REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
 vulnerables/web-dvwa   latest              ab0d83586b6e        2 years ago         712MB
 ```
+
+```
+docker run -it --rm -p 80:80 --name mydvwa vulnerables/web-dvwa
+```
 ## 範例 ==> asp.net Core 應用程式 容器化
 ```
 GOOGLE ==> dockerhub asp.net core
