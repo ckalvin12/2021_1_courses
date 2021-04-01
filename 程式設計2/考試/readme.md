@@ -3,6 +3,22 @@
 
 
 ```
+# 填充題
+```
+public class Angle {
+	public static void main(String[] args) {
+		double angle = 60;				
+                double radian = _____________________;   
+		
+		double sin = Math.sin(radian); 		
+                System.out.println("sin=" + sin);	
+		double cos = Math.cos(radian); 		
+                System.out.println("cos=" + cos);
+	 
+	}
+
+}
+```
 # 問答題
 ```
 [1]舉例說明　傳值呼叫(call by value)　與　參考呼叫(call by reference)
