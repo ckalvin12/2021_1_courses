@@ -3,7 +3,12 @@
 
 
 ```
-# 四星彩開獎系統
+# 問答題
+```
+[1]舉例說明　傳值呼叫(call by value)　與　參考呼叫(call by reference)
+[2]舉例說明　方法多載
+```
+# 程式設計題 四星彩開獎系統
 ```
 程式執行時會顯示0~9重複亂數號碼。
 本期四星彩開獎號碼如下：
@@ -47,7 +52,37 @@ public class EX_4StarKiJiang {
    int i;
    i = (int) (Math.random() * 100) +1;
 ```
-# 費氏數列:遞迴方法 vs iterative
+# n!:遞迴方法 vs iterative
+## iterative
+```
+ublic class Method1 {
+	public static void main(String[] args) {
+		factorial(6);
+		factorial(9);
+	}
+
+	static void factorial(int x) {
+		int i = x, j = 1;
+		while(i > 0)
+			j *= i--;
+		System.out.println(x + "! = " + j);
+	}
+```
+## 遞迴方法
+```
+終止式　==> 0!=1  1!=1
+遞迴式  ==> f(n) = n*(n-1)*(n-2)*....*2*1
+                 = n*f(n-1);
+
+static void factorial(int x) {
+	if (x == 1)
+           return 1;
+	else		
+	  return (x*factorial(x-1));
+	}
+```
+
+# 費氏數列:遞迴方法 vs iterative  ==> 再算　時間複雜度
 ```
 費氏數列值第1及第2 項皆為1，
 第3項之後的公式為f(n)= f(n-1) + f(n-2)。
