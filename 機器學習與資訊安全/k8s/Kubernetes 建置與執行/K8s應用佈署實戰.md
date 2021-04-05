@@ -38,3 +38,54 @@ http:l/localhost:8888/?token=<toke登入密鑰>
 ```
 
 ```
+
+
+
+# Parse :設計給行動裝置APP 使用的開源API 伺服器
+```
+
+```
+## parse.yaml
+```
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: parse-server
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: parse-server
+    spec:
+      containers:
+      - name: parse-server
+        image: ${DOCKER_USER}/parse-server
+        env:
+        - name: PARSE_SERVER_DATABASE_URI
+          value: "mongodb://mongo-0.mongo:27017,\
+            mongo-1.mongo:27017,mongo-2.mongo\
+            :27017/dev?replicaSet=rs0"
+        - name: PARSE_SERVER_APP_ID
+          value: my-app-id
+        - name: PARSE_SERVER_MASTER_KEY
+          value: my-master-key
+```
+
+# Ghost :部落格和內容管理平台
+```
+
+```
+##
+```
+
+```
+# Redis :輕量、高性能的主鍵／值資料庫
+```
+
+```
+##
+```
+
+```
