@@ -5,6 +5,7 @@ Kubernetes: Up and Running: Dive into the Future of Infrastructure, 2/e)
 Brendan Burns,Kelsey Hightower,Joe Beda 林毅民（Sammy Lin）、謝智浩（Scott） 譯
 
 歐萊禮 2019/2020
+https://github.com/kubernetes-up-and-running
 ```
 ```
 第一章 緒論
