@@ -4,7 +4,7 @@ Kubernetes 建置與執行 : 邁向基礎設施的未來, 2/e
 Kubernetes: Up and Running: Dive into the Future of Infrastructure, 2/e)
 Brendan Burns,Kelsey Hightower,Joe Beda 林毅民（Sammy Lin）、謝智浩（Scott） 譯
 
-歐萊禮
+歐萊禮 2019/2020
 ```
 ```
 第一章 緒論
