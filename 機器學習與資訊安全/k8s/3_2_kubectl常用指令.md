@@ -11,6 +11,11 @@ Alternative Ways of Viewing Your Cluster
 ```
 
 ```
+
+kubectl help
+kubectl help <command-name>
+
+
 Namespaces ==>  kubectl --namespace=mystuff
 
 
@@ -55,9 +60,14 @@ Debugging Commands
          kubectl top pods
          
 Command Autocompletion
+   安裝
    # CentOS/Red Hat ==> yum install bash-completion
    # Debian/Ubuntu ==> apt-get install bash-completion
-
-
+   
+   啟動activate
+    source <(kubectl completion bash)
+    
+    echo "source <(kubectl completion bash)" >> ${HOME}/.bashrc
+    
 Alternative Ways of Viewing Your Cluster
 ```
