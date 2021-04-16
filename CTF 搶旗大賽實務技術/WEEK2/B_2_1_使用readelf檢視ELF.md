@@ -65,9 +65,7 @@ readelf - Displays information about ELF files.
 [Examining the Relocation Section]
 查看符號表system Table
 
-
 查看某特定section
-
 ```
 ## 查看ELF header
 ```
