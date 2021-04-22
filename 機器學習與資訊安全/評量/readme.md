@@ -10,6 +10,7 @@
 https://scikit-learn.org/stable/
 
 ```
+# 1.監督式學習
 # Classification
 ```
 https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
@@ -40,11 +41,15 @@ https://zh.wikipedia.org/wiki/決策樹學習
 ```
 裝袋算法（Bagging）, 是一個早期的集成方法，用有放回抽樣法來訓練多棵決策樹，最終結果用投票法產生。
 隨機森林（Random Forest） 使用多棵決策樹來改進分類性能。
-提升樹（Boosting Tree） 可以用來做回歸分析和分類決策[4][5]
+提升樹（Boosting Tree） 可以用來做回歸分析和分類決策
 旋轉森林（Rotation forest） – 每棵樹的訓練首先使用主元分析法 (PCA)
 ```
 
 #
+```
+
+```
+# 2.非監督式學習
 ```
 
 ```
