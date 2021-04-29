@@ -5,6 +5,22 @@
 原文網址：https://kknews.cc/code/krymlyr.html
 ```
 
+### Hands-On Artificial Intelligence for Cybersecurity 
+```
+Hands-On Artificial Intelligence for Cybersecurity
+By Alessandro Parisi
+
+https://github.com/PacktPublishing/Hands-On-Artificial-Intelligence-for-Cybersecurity
+
+Ch 3.Ham or Spam? Detecting Email Cybersecurity Threats with AI
+Detecting spam with Perceptrons
+Spam detection with SVMs
+Phishing detection with logistic regression and decision trees
+Spam detection with Naive Bayes
+NLP to the rescue
 ```
 
+#
+```
+Hands-On Artificial Intelligence for IoT
 ```
