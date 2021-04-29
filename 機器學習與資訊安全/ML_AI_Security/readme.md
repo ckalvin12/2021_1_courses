@@ -10,6 +10,10 @@
 Hands-On Artificial Intelligence for Cybersecurity
 By Alessandro Parisi
 
+人工智能在網絡安全中的應用
+簡體中文/Alessandro Parisi/東南大學出版日期：2020-09-01
+https://www.tenlong.com.tw/products/9787564191184?list_name=srh
+
 https://github.com/PacktPublishing/Hands-On-Artificial-Intelligence-for-Cybersecurity
 
 Ch 3.Ham or Spam? Detecting Email Cybersecurity Threats with AI
